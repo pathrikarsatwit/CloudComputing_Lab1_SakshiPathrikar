@@ -20,7 +20,7 @@ quote["Hela"] = "You're in my seat."
 quote["Loki"] = "We have a hulk"
 #1. Root Route
 @app.get("/")
-async def read_root():
+async def root_route():
     return  "Hello, Welcome to Marvel!"
 
 #2. Simple Route
