@@ -53,5 +53,5 @@
       11. To verify avenger using header: python cli.py verify --code Av1234
       12. To view username using cookies: python cli.py welcome --username Tony 
    3. To Run Unit Tests:
-      1. In the terminal enter python -m unittest tests.py
+      1. In the terminal enter python -m1 unittest tests.py
 

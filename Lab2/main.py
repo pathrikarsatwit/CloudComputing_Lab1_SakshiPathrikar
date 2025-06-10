@@ -85,14 +85,14 @@ async def youravenger():
 
 #11. Header Route 
 @app.get("/verify-avenger")
-def verify_avenger(x_avenger_code: Optional[str] = Header(None)):
+async def verify_avenger(x_avenger_code: str = Header(None)):
     if x_avenger_code == "Av1234":
         return {"message": "Access granted to Avenger!"}
     return {"message": "Access denied. Invalid Avenger Code."}
 
 #12. Cookie Route
 @app.get("/welcome")
-def welcome_user(username: Optional[str] = Cookie(None)):
-    return {"message": f"Welcome back, {username or 'Guest'}!"}
+async def welcome_user(username: str = Cookie(None)):
+    return {"message": f"Welcome {username}"}
 
 
