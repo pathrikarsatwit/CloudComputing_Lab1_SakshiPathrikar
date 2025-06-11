@@ -28,7 +28,7 @@
 
    
 4. Detailed instructions on how to run your project
-   1. To View the Project in Browser:
+   1. To View the Project in Browser: cd into Lab1 or Lab2 forllder then type uvicorn main:app --port 8080 --reload which will allow the program to connect to a web server then in the browser type http://localhost:8080/{route_name}
       1. / : To view a welcome message
       2. /avengers: To view the avengers list
       3. /villan : To view the villians list 
