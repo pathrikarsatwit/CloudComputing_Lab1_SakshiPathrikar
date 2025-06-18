@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  firstcloudexample:
+    image: firstcloudexample:latest
+    container_name: firstcloudexample
+    restart: always
+    ports:
+      - "8080:8080"
+
+firstcloudexample1:
+  image: firstcloudexample:latest
+  container_name: firstcloudexample1
+  restart: always
+ports:
+  - "9000:8080"
