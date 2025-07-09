@@ -26,4 +26,4 @@
         6. It should ask for a password and the password is Sakshi@1234. This should log into mysql
         7. But mysql won't have any data yet, so go in dbeaver, open a new connection choose port 3307 with the password Sakshi@1234, change the permissions for    public key retrival to true under driver properties tab.
         8. Then open a new sql script load the my_guitar_shop by running the createguitar script.
-        9. Then, run the Lab5_Scripts and you should be able to see the results!
+        9. Then, run the Lab5_Scripts and you should be able to see the results.
