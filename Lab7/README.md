@@ -25,6 +25,7 @@
         2. Then if using pycharm, right click and select run, if using vs code click the run button from the top right hand corner.
         3. Then in the terminal all the queries should be displayed and enter the key (number next to the query) of the query you want to run and you shouldd see the output.
         4. When you want to exit the driver enter 0.
+        5. To run the tests enter 11.
     2. To run this project on port 3307, which is the docker instance: 
         1. Make sure port in cli.py file is 3307.
         2. If you have the docker instance already setup: 
