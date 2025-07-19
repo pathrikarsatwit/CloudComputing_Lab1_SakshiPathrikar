@@ -39,7 +39,7 @@ def connect_to_db():
 
         mydb = mysql.connector.connect(
             host="127.0.0.1",
-            port=3306,
+            port=3307,
             user="root",
             password="Sakshi@1234",
             database="my_guitar_shop"
