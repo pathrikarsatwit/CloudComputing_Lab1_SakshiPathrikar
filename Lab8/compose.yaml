@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+
+  postfix:
+    image: boky/postfix
+    container_name: postfix
+    environment:
+      - HOSTNAME=mail.localhost
+      - RELAYHOST=[mailhog]:1025
+      - ALLOWED_SENDER_DOMAINS=*
+      - SMTPD_RELAY_RESTRICTIONS=permit_mynetworks,permit_sasl_authenticated,reject_unauth_destination
+      - POSTFIX_MAIL_OPTIONS=disable_dns_lookups=yes relay_domains=mail.localhost
+    ports:
+      - "1587:587"
+      - "2525:25"
+    restart: unless-stopped
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    command: ["redis-server"]
+    restart: unless-stopped
+
+volumes:
+  minio_data:
