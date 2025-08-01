@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Pokémon</title>
+</head>
+<body>
+    <h1>Edit Pokémon</h1>
+    <form method="post">
+        <label>Name:</label>
+        <input type="text" name="pokemon_name" value="{{ pokemon.pokemon_name }}" required><br>
+
+        <label>Level:</label>
+        <input type="number" name="pokemon_level" value="{{ pokemon.pokemon_level }}" required><br>
+
+        <label>Type:</label>
+        <select name="type_id">
+            {% for t in types %}
+                <option value="{{ t.type_id }}" {% if t.type_id == current_type_id %}selected{% endif %}>{{ t.type_name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Attack:</label>
+        <select name="attack_id">
+            {% for a in attacks %}
+                <option value="{{ a.attack_id }}" {% if a.attack_id == current_attack_id %}selected{% endif %}>{{ a.attack_name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

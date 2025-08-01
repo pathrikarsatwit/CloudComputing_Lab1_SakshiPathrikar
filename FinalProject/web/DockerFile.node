@@ -1,0 +1,9 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY app.js .
+
+RUN npm init -y && npm install express body-parser mysql2 express-session
+
+CMD ["node", "app.js"]

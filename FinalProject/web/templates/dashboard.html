@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h1>All Pokémon</h1>
+  <ul>
+    {% for p in pokemons %}
+      <li>{{ p.pokemon_id }} - {{ p.pokemon_name }} (Level: {{ p.pokemon_level }})</li>
+    {% endfor %}
+  </ul>
+
+  <h2>All Types</h2>
+  <ul>
+    {% for t in types %}
+      <li>{{ t.type_name }} - {{ t.description }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>All Special Attacks</h2>
+  <ul>
+    {% for a in attacks %}
+      <li>{{ a.attack_name }} (Power: {{ a.attack_power }})</li>
+    {% endfor %}
+  </ul>
+
+  <form action="/add" method="get" style="margin-bottom: 10px;">
+    <button type="submit">Add New Pokémon</button>
+  </form>
+
+  <form action="/addType" method="get" style="margin-bottom: 10px;">
+    <button type="submit">Add New Type</button>
+  </form>
+
+  <form action="/addAttack" method="get">
+    <button type="submit">Add New Special Attack</button>
+  </form>
+</body>
+</html>

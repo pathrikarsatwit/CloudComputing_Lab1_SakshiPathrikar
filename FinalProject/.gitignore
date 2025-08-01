@@ -1,0 +1,14 @@
+# Ignore all log files
+*.log
+
+# Do not ignore 'important.log' even if it's a .log file
+!important.log
+
+# Ignore the 'build' directory
+build/
+
+# Ignore the 'temp' file in the root directory only
+/temp
+
+# Ignore the 'mysql_db_data' folder
+mysql_db_data/

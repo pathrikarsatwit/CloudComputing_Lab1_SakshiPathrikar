@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Pokémon</title></head>
+<body>
+  <h2>Add New Pokémon</h2>
+  <form method="POST" action="/addPokemon" enctype="multipart/form-data">
+    <label>Name:</label><br/>
+    <input name="pokemmon_name" required /><br/>
+
+    <label>Level:</label><br/>
+    <input type="number" name="pokemon_level" required /><br/>
+
+    <label>Type:</label><br/>
+    <select name="type_id">
+      {% for t in types %}
+        <option value="{{ t.type_id }}">{{ t.type_name }}</option>
+      {% endfor %}
+    </select><br/>
+
+    <label>Attack:</label><br/>
+    <select name="attack_id">
+      {% for a in attacks %}
+        <option value="{{ a.attack_id }}">{{ a.attack_name }}</option>
+      {% endfor %}
+    </select><br/>
+
+    <button type="submit">Create Pokémon</button>
+  </form>
+</body>
+</html>

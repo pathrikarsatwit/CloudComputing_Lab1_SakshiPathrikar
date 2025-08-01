@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+minio==7.1.17
+mysql-connector-python
