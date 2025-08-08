@@ -1,4 +1,5 @@
-# CloudComputing_FinalProject: SakshiPathrikar and Davud Azizov
+# CloudComputing_FinalProject
+Members: Davud and Sakshi
 
 1. Introduction To your project
     1. This project is built to provide a cloud environment that a Software developer can use to create an application.
